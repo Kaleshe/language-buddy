@@ -1,0 +1,48 @@
+{
+  "bookings": [
+    {
+      "id": 1,
+      "date_time": "2023-01-31T15:00-07:00",
+      "duration": 30,
+      "organiser": {
+        "id": 935
+      },
+      "participant": {
+        "id": 294
+      }
+    },
+    {
+      "id": 2,
+      "date_time": "2023-01-31T15:00-07:00",
+      "duration": 30,
+      "organiser": {
+        "id": 935
+      },
+      "participant": {
+        "id": 295
+      }
+    },
+    {
+      "id": 3,
+      "date_time": "2023-01-31T15:00-07:00",
+      "organiser": {
+        "id": 935
+      },
+      "participant": {
+        "id": 294
+      }
+    }
+  ],
+  "users": [
+    {
+      "first_name": "Ryo",
+      "last_name": "Unagi",
+      "id": 935
+    },
+    {
+      "first_name": "Kaleshe",
+      "last_name": "Alleyne-Vassel",
+      "id": 294
+    }
+  ]
+}
