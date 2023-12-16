@@ -1,12 +1,12 @@
 import clsx from "clsx";
 import React from "react";
 
-interface Props {
+type ContainerProps = {
   children: React.ReactNode;
-  className: string;
+  className?: string;
 }
 
-const Container: React.FC<Props> = ({ children, className }) => (
+const Container = ({ children, className }: ContainerProps) => (
   <div className={clsx("max-w-md mx-auto py-20 px-8", className)}>
     {children}
   </div>

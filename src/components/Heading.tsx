@@ -1,10 +1,8 @@
-import React from "react";
+type HeadingProps = {
+  children: JSX.Element | string;
+};
 
-interface Props {
-  children: string;
-}
-
-const Heading: React.FC<Props> = ({ children }) => (
+const Heading = ({ children }: HeadingProps) => (
   <h1 className="text-2xl font-bold">{children}</h1>
 );
 

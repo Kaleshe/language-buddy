@@ -2,19 +2,13 @@ import clsx from "clsx";
 import { twMerge } from "tailwind-merge";
 import React from "react";
 
-interface Props {
+type ButtonProps = {
   children: React.ReactNode;
   className?: string;
   href?: string;
-  [otherProps: string]: any;
-}
+};
 
-const Button: React.FC<Props> = ({
-  children,
-  className,
-  href,
-  ...otherProps
-}) => {
+const Button = ({ children, className, href, ...otherProps }: ButtonProps) => {
   const Element = href ? "a" : "button";
 
   return (
