@@ -3,7 +3,6 @@ import { twMerge } from "tailwind-merge";
 import React from "react";
 
 interface Props {
-  children: React.ReactNode;
   className?: string;
   href?: string;
   [otherProps: string]: any;

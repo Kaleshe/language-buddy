@@ -2,7 +2,7 @@ import clsx from "clsx";
 import React from "react";
 
 interface Props {
-  children: JSX.Element|string;
+  children: React.ReactNode|string;
   className: string;
 }
 
