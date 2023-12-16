@@ -1,18 +1,19 @@
-import { useEffect, useState } from "react";
-import { getBookings } from "../../functions.js";
+import React, { useEffect, useState } from "react";
 
 import Container from "../components/Container.jsx";
 import Heading from "../components/Heading.jsx";
 import Subheading from "../components/Subheading.jsx";
 import Card from "../components/Card.jsx";
 
-const USER = 294;
+interface Props {
+  bookings: Array<object>;
+}
 
-const Upcoming = ({ bookings }: Array<object>) => (
+const Upcoming: React.FC<Props> = ({ bookings }) => (
   <div>
     <Subheading className="mb-4">Upcoming</Subheading>
     <ul className="flex gap-4 overflow-x-hidden">
-      {bookings.map(booking => (
+      {bookings.map((booking: object) => (
         <Card key={booking.id} {...booking} />
       ))}
     </ul>
@@ -24,15 +25,15 @@ const Dashboard = () => {
 
   useEffect(() => {
     (async () => {
-      const result = await getBookings(USER);
-      setBookings(result);
+      // const result = await getBookings(USER);
+      // setBookings(result);
     })();
   }, []);
 
   return (
     <Container className="space-y-8">
       <Heading>Dashboard</Heading>
-      <Upcoming     bookings={bookings} />
+      <Upcoming bookings={bookings} />
     </Container>
   );
 };

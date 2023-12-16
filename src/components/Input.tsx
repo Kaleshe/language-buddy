@@ -1,4 +1,12 @@
-const Input = ({ label, name, children, ...otherProps }) => (
+import React from "react";
+
+interface Props {
+  label: string;
+  name: string;
+  [otherProps:string]: any;
+}
+
+const Input: React.FC<Props> = ({ label, name, ...otherProps }) => (
   <div>
     <label htmlFor={name} className="text-sm text-gray font-semibold">
       {label}

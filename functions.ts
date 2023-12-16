@@ -1,5 +1,4 @@
 import axios from "axios";
-import qs from "qs";
 
 export const getBookings = async (user_id) => {
   return await axios
@@ -23,6 +22,12 @@ export const getBookings = async (user_id) => {
     });
 };
 
-export const getUser = (user_id) => {
-  return USERS.find((user) => user.id === user_id);
+export const getUser = () => {
+  // return USERS.find((user) => user.id === user_id);
+};
+
+export const createUserAccount = () => {};
+
+export const isValidPassword = (password: string, confirmPassword: string) => {
+  return password === confirmPassword;
 };

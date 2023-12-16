@@ -1,6 +1,12 @@
 import clsx from "clsx";
+import React from "react";
 
-const Subheading = ({ children, className }) => (
+interface Props {
+  children: JSX.Element|string;
+  className: string;
+}
+
+const Subheading: React.FC<Props> = ({ children, className }) => (
   <h1 className={clsx(className, "text-gray font-semibold")}>{children}</h1>
 );
 
