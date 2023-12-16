@@ -1,5 +1,7 @@
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 
+import { CurrentUserProvider } from "./context/LoginContext.js";
+
 import "./App.css";
 
 import SignUp from "./views/SignUp.jsx";
@@ -19,7 +21,11 @@ function App() {
     { path: "/dashboard", element: <Dashboard /> },
   ]);
 
-  return <RouterProvider router={router} />;
+  return (
+    <CurrentUserProvider>
+      <RouterProvider router={router} />;
+    </CurrentUserProvider>
+  );
 }
 
 export default App;

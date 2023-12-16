@@ -10,7 +10,11 @@ const CurrentUserContext = createContext<CurrentUser | null>(null);
 
 const CurrentUserProvider = ({ children }) => {
   const [user, setUser] = useState<CurrentUser>(null);
-  return <CurrentUserContext.Provider>{children}</CurrentUserContext.Provider>;
+  return (
+    <CurrentUserContext.Provider value={{ user, setUser }}>
+      {children}
+    </CurrentUserContext.Provider>
+  );
 };
 
 export { CurrentUserProvider, CurrentUserContext };

@@ -1,7 +1,8 @@
 import React from "react";
+import { useNavigate } from "react-router-dom";
 
 import { isValidPassword, createUserAccount } from "../../functions.ts";
-import { useNavigate } from "react-router-dom";
+import {setUser} fro
 
 import Container from "../components/Container.jsx";
 import Heading from "../components/Heading.jsx";
@@ -30,7 +31,7 @@ const SignUpForm = () => {
         dob: dob,
         password: password, // TODO: Create a password protection function
       });
-
+      setUser();
       history("/dashboard");
     }
   };
