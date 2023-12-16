@@ -1,19 +1,19 @@
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 
 import Container from "../components/Container.jsx";
 import Heading from "../components/Heading.jsx";
 import Subheading from "../components/Subheading.jsx";
 import Card from "../components/Card.jsx";
 
-interface Props {
+type DashboardProps = {
   bookings: Array<object>;
-}
+};
 
-const Upcoming: React.FC<Props> = ({ bookings }) => (
+const Upcoming = ({ bookings }: DashboardProps) => (
   <div>
     <Subheading className="mb-4">Upcoming</Subheading>
     <ul className="flex gap-4 overflow-x-hidden">
-      {bookings.map((booking: object) => (
+      {bookings.map((booking) => (
         <Card key={booking.id} {...booking} />
       ))}
     </ul>

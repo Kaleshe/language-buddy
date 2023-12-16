@@ -1,9 +1,7 @@
-import React from "react";
-
-interface Props {
+type LayoutProps = {
   children: JSX.Element;
-}
+};
 
-const Layout: React.FC<Props> = ({ children }) => <div>{children}</div>;
+const Layout = ({ children }: LayoutProps) => <div>{children}</div>;
 
 export default Layout;

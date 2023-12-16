@@ -25,7 +25,7 @@ const handleSubmit = (e: React.FormEvent) => {
   }
 };
 
-const SignUpForm: React.FC = () => (
+const SignUpForm = () => (
   <form onSubmit={handleSubmit}>
     <div className="space-y-4">
       <Input name="fname" type="text" label="First name" required />
@@ -46,7 +46,7 @@ const SignUpForm: React.FC = () => (
   </form>
 );
 
-const SignUp: React.FC = () => (
+const SignUp = () => (
   <Container className="space-y-8">
     <Heading>Sign up</Heading>
     <SignUpForm />
