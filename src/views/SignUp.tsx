@@ -28,9 +28,9 @@ const handleSubmit = (e: React.FormEvent) => {
 const SignUpForm: React.FC = () => (
   <form onSubmit={handleSubmit}>
     <div className="space-y-4">
-      <Input name="fname" type="text" label="First name" />
-      <Input name="lname" type="text" label="Last name" />
-      <Input name="dob" type="date" label="Date of birth" />
+      <Input name="fname" type="text" label="First name" required />
+      <Input name="lname" type="text" label="Last name" required />
+      <Input name="dob" type="date" label="Date of birth" required />
       <Input name="password" type="password" label="Password" required />
       <Input
         name="confirm-password"
