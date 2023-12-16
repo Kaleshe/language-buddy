@@ -1,5 +1,7 @@
-import "./App.css";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
+
+import "./App.css";
+
 import SignUp from "./views/SignUp.jsx";
 import Home from "./views/Home.jsx";
 import Dashboard from "./views/Dashboard.jsx";

@@ -35,14 +35,18 @@
   ],
   "users": [
     {
-      "first_name": "Ryo",
-      "last_name": "Unagi",
-      "id": 935
-    },
-    {
       "first_name": "Kaleshe",
       "last_name": "Alleyne-Vassel",
-      "id": 294
+      "dob": "1994-10-28",
+      "password": "Password",
+      "id": 1
+    },
+    {
+      "first_name": "Ryo",
+      "last_name": "Tanaka",
+      "dob": "1993-02-01",
+      "password": "Pass",
+      "id": 2
     }
   ]
 }

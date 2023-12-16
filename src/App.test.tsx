@@ -12,7 +12,7 @@ describe("Renders main page correctly", () => {
   });
 });
 
-describe("Password validation function", () => {
+describe("Password validation", () => {
   it("Password matches confirmation password so returns true", () => {
     const password = "password123";
     const confirmPassword = "password123";

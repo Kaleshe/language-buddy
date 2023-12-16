@@ -13,6 +13,7 @@ const Input: React.FC<Props> = ({ label, name, ...otherProps }) => (
     <input
       className="mt-2 block w-full border rounded-xl px-4 py-2 border-gray/20 text-black/60"
       name={name}
+      id={name}
       {...otherProps}
     />
   </div>

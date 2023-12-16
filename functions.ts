@@ -1,15 +1,24 @@
 import axios from "axios";
 
-export const getBookings = async (user_id) => {
+type Participant = {
+  id: number;
+};
+
+type User = {
+  first_name: string;
+  last_name: string;
+  dob: number;
+  password: string;
+  confirmPassword: string;
+};
+
+export const getBookings = async (user_id: number) => {
   return await axios
     .get("http://localhost:3000/bookings", {
       params: { participant: { id: user_id } },
-      // paramsSerializer: function (params) {
-      //   return qs.stringify(params, { arrayFormat: "brackets" });
-      // },
     })
     .then(function ({ data }) {
-      return data.map((i) => {
+      return data.map((i: Participant) => {
         i.participant.name = "Kaleshe";
         return i;
       });
@@ -26,7 +35,9 @@ export const getUser = () => {
   // return USERS.find((user) => user.id === user_id);
 };
 
-export const createUserAccount = () => {};
+export const createUserAccount = (userData: User) => {
+  axios.post("http://localhost:3000/users", userData);
+};
 
 export const isValidPassword = (password: string, confirmPassword: string) => {
   return password === confirmPassword;
