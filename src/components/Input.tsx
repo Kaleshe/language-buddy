@@ -3,7 +3,6 @@ import React from "react";
 interface Props {
   label: string;
   name: string;
-  [otherProps:string]: any;
 }
 
 const Input: React.FC<Props> = ({ label, name, ...otherProps }) => (

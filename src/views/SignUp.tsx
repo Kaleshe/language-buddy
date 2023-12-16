@@ -31,7 +31,7 @@ const SignUpForm: React.FC = () => (
       <Input name="fname" type="text" label="First name" />
       <Input name="lname" type="text" label="Last name" />
       <Input name="dob" type="date" label="Date of birth" />
-      <Input name="password" type="password" label="Password" reqiuired />
+      <Input name="password" type="password" label="Password" required />
       <Input
         name="confirm-password"
         type="password"
