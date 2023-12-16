@@ -57,7 +57,28 @@ const SignUpForm: React.FC = () => {
   );
 };
 
-const SignUp: React.FC = () => (
+const SignUpForm = () => (
+  <form onSubmit={handleSubmit}>
+    <div className="space-y-4">
+      <Input name="fname" type="text" label="First name" required />
+      <Input name="lname" type="text" label="Last name" required />
+      <Input name="dob" type="date" label="Date of birth" required />
+      <Input name="password" type="password" label="Password" required />
+      <Input
+        name="confirm-password"
+        type="password"
+        label="Confirm password"
+        required
+      />
+    </div>
+
+    <Button className="mt-24 mx-auto block" type="submit">
+      Create account
+    </Button>
+  </form>
+);
+
+const SignUp = () => (
   <Container className="space-y-8">
     <Heading>Sign up</Heading>
     <SignUpForm />

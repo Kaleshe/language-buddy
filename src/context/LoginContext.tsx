@@ -8,7 +8,7 @@ interface CurrentUser {
 
 const CurrentUserContext = createContext<CurrentUser | null>(null);
 
-const CurrentUserProvider: React.FC = ({ children }) => {
+const CurrentUserProvider = ({ children }) => {
   const [user, setUser] = useState<CurrentUser>(null);
   return <CurrentUserContext.Provider>{children}</CurrentUserContext.Provider>;
 };

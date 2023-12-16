@@ -1,11 +1,9 @@
-import React from "react";
-
-interface Props {
+type InputProps = {
   label: string;
   name: string;
-}
+};
 
-const Input: React.FC<Props> = ({ label, name, ...otherProps }) => (
+const Input = ({ label, name, ...otherProps }: InputProps) => (
   <div>
     <label htmlFor={name} className="text-sm text-gray font-semibold">
       {label}
