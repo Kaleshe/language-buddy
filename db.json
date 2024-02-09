@@ -4,49 +4,89 @@
       "id": 1,
       "date_time": "2023-01-31T15:00-07:00",
       "duration": 30,
-      "organiser": {
-        "id": 935
-      },
-      "participant": {
-        "id": 294
-      }
+      "organiser_id": 1,
+      "participant_id": 3
     },
     {
       "id": 2,
       "date_time": "2023-01-31T15:00-07:00",
       "duration": 30,
-      "organiser": {
-        "id": 935
-      },
-      "participant": {
-        "id": 295
-      }
-    },
-    {
-      "id": 3,
-      "date_time": "2023-01-31T15:00-07:00",
-      "organiser": {
-        "id": 935
-      },
-      "participant": {
-        "id": 294
-      }
+      "organiser_id": 1,
+      "participant_id": 2
     }
   ],
   "users": [
     {
       "first_name": "Kaleshe",
       "last_name": "Alleyne-Vassel",
+      "username": "kaleshe",
+      "email": "test@gmail.com",
       "dob": "1994-10-28",
-      "password": "Password",
+      "password": "test",
       "id": 1
     },
     {
-      "first_name": "Ryo",
-      "last_name": "Tanaka",
-      "dob": "1993-02-01",
+      "first_name": "Jessica",
+      "last_name": "Okinfe",
+      "username": "jess",
+      "email": "barbie@gmail.com",
+      "dob": "1996-08-02",
       "password": "Pass",
       "id": 2
+    },
+    {
+      "first_name": "Kaleshe",
+      "last_name": "Alleyne-Vassel",
+      "username": "kaleshe",
+      "email": "kalesheav@gmail.com",
+      "dob": "2024-02-17",
+      "password": "ghzzN$F'}Dd~2Vy",
+      "id": 3
+    },
+    {
+      "first_name": "asa",
+      "last_name": "sds",
+      "username": "kaleshe",
+      "email": "ssd@sd.com",
+      "dob": "2024-02-22",
+      "password": "test",
+      "id": 4
+    },
+    {
+      "first_name": "asa",
+      "last_name": "sds",
+      "username": "kaleshe",
+      "email": "ssd@sd.com",
+      "dob": "2024-02-22",
+      "password": "test",
+      "id": 5
+    },
+    {
+      "first_name": "asa",
+      "last_name": "sds",
+      "username": "kaleshe",
+      "email": "ssd@sd.com",
+      "dob": "2024-02-22",
+      "password": "test",
+      "id": 6
+    },
+    {
+      "first_name": "Kaleshe",
+      "last_name": "Alleyne-Vassel",
+      "username": "sa",
+      "email": "kalesheav@gmail.com",
+      "dob": "2024-02-24",
+      "password": "tes",
+      "id": 7
+    },
+    {
+      "first_name": "Kaleshe",
+      "last_name": "Alleyne-Vassel",
+      "username": "sa",
+      "email": "kalesheav@gmail.com",
+      "dob": "2024-02-24",
+      "password": "tes",
+      "id": 8
     }
   ]
 }

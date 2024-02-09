@@ -4,41 +4,71 @@ type Participant = {
   id: number;
 };
 
-type User = {
+export interface UserType {
   first_name: string;
   last_name: string;
-  dob: number;
+  username: string;
+  email: string;
+  dob: string;
   password: string;
   confirmPassword: string;
+}
+
+export const getBookings = async (user_id: Participant) => {
+  try {
+    const { data: organiser } = await axios.get(
+      "http://localhost:3000/bookings",
+      {
+        params: { organiser_id: user_id },
+      }
+    );
+
+    const { data: participant } = await axios.get(
+      "http://localhost:3000/bookings",
+      {
+        params: { participant_id: user_id },
+      }
+    );
+
+    const bookings = [...organiser, ...participant];
+
+    return bookings;
+  } catch (err) {
+    console.error(err);
+  }
 };
 
-export const getBookings = async (user_id: number) => {
-  return await axios
-    .get("http://localhost:3000/bookings", {
-      params: { participant: { id: user_id } },
-    })
-    .then(function ({ data }) {
-      return data.map((i: Participant) => {
-        i.participant.name = "Kaleshe";
-        return i;
-      });
-    })
-    .catch(function (error) {
-      console.log(error);
-    })
-    .finally(function () {
-      console.log("All done!");
+export const createUser = async (userData: UserType) => {
+  try {
+    const { data } = await axios.post("http://localhost:3000/users", userData);
+    return data;
+  } catch (err) {
+    console.error(err);
+  }
+
+  return false;
+};
+
+export const isValidCredentials = async (
+  username: string,
+  password: string
+) => {
+  try {
+    const { data } = await axios.get("http://localhost:3000/bookings", {
+      params: { participant: { username: username, password: password } },
     });
+
+    return data;
+  } catch (err) {
+    console.error(err);
+  }
+
+  return false;
 };
 
-export const getUser = () => {
-  // return USERS.find((user) => user.id === user_id);
-};
-
-export const createUserAccount = (userData: User) => {
-  axios.post("http://localhost:3000/users", userData);
-};
-
-export const isValidPassword = (password: string, confirmPassword: string) => {
+export const isValidPassword = (
+  password: string,
+  confirmPassword: string
+): boolean => {
   return password === confirmPassword;
 };
